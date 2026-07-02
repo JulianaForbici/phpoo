@@ -6,26 +6,22 @@ final class Connection
 
     public static function open($name)
     {
-        if(file_exists("App/Config/{$name}.ini")) {
-            $db = parse_ini_file("App/Config/{$name}.php");
-        }
-        else if (file_exists("App/Config/{$name}.php")) {
+        if (file_exists("App/Config/{$name}.ini")) {
+            $db = parse_ini_file("App/Config/{$name}.ini");
+        } elseif (file_exists("App/Config/{$name}.php")) {
             $db = require "App/Config/{$name}.php";
-        }
-        else
-        {
+        } else {
             throw new Exception("Arquivo {$name} não encontrado.");
         }
 
         $user = isset($db['user']) ? $db['user'] : null;
-        $pass = isset($db['user']) ? $db['pass'] : null;
-        $name = isset($db['user']) ? $db['name'] : null;
-        $host = isset($db['user']) ? $db['host'] : null;
-        $type = isset($db['user']) ? $db['type'] : null;
-        $port = isset($db['user']) ? $db['port'] : null;
+        $pass = isset($db['pass']) ? $db['pass'] : null;
+        $name = isset($db['name']) ? $db['name'] : null;
+        $host = isset($db['host']) ? $db['host'] : null;
+        $type = isset($db['type']) ? $db['type'] : null;
+        $port = isset($db['port']) ? $db['port'] : null;
 
-        switch ($type)
-        {
+        switch ($type) {
             case 'pgsql':
                 $port = $port ? $port : '5432';
                 $conn = new PDO("pgsql:dbname={$name}; user={$user}; password={$pass};
