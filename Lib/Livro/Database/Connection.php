@@ -1,5 +1,7 @@
 <?php
 
+namespace Livro\Database;
+
 final class Connection
 {
     private function __construct() {}
