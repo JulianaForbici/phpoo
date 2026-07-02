@@ -1,14 +1,15 @@
 <?php
+namespace Livro\Database;
+use Livro\Database\RecordInterface;
 
 abstract class Record implements RecordInterface
 {
-    protected $data = [];
+    protected $data;
 
     public function __construct($id = null)
     {
-        if ($id !== null) {
+        if ($id) {
             $object = $this->load($id);
-
             if ($object) {
                 $this->fromArray($object->toArray());
             }
@@ -109,10 +110,15 @@ abstract class Record implements RecordInterface
                 $prepared['id'] = $this->id;
             }
 
-            $sql = "INSERT INTO {$this->getEntity()} " .
-                '(' . implode(', ', array_keys($prepared)) . ')' .
+            $sql =
+                "INSERT INTO {$this->getEntity()} " .
+                '(' .
+                implode(', ', array_keys($prepared)) .
+                ')' .
                 ' VALUES ' .
-                '(' . implode(', ', array_values($prepared)) . ')';
+                '(' .
+                implode(', ', array_values($prepared)) .
+                ')';
         } else {
             $set = [];
 
