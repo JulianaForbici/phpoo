@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'host'  =>  "localhost",
-    'port'  =>  "5432",
-    'name'  =>  "livro",
-    'user'  =>  "postgres",
-    'pass'  =>  "postgres",
-    'type'  =>  "psql",
-    'prep'  =>  "1"
+    'host' => 'localhost',
+    'port' => '5432',
+    'name' => 'livro',
+    'user' => 'postgres',
+    'pass' => 'postgres',
+    'type' => 'pgsql',
+    'prep' => '1',
 ];
