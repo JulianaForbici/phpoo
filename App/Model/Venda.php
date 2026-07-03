@@ -72,7 +72,8 @@ class Venda extends Record
 
         $conn = Transaction::get();
         $result = $conn->query(
-            "select strftime('%m', data_venda) as mes, sum(valor_final) as valor from venda group by 1");
+            "select strftime('%m', data_venda) as mes, sum(valor_final) as valor from venda group by 1"
+        );
 
         $dataset = [];
         foreach ($result as $row) {
