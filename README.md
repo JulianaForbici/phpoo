@@ -1,12 +1,8 @@
-# phpoo
+## Sobre o projeto
 
 ![PHP Programando com Orientação a Objetos](https://m.media-amazon.com/images/I/61v7DQ6hY7L._AC_UF1000,1000_QL80_.jpg)
 
-## Sobre o projeto
-
-Esse repositório contém uma aplicação desenvolvida com base no livro **PHP Programando com Orientação a Objetos - 4ª edição**, de **Pablo Dall'Oglio**.
-
-O objetivo do projeto é estudar e aplicar conceitos de **Programação Orientada a Objetos em PHP**, incluindo organização de classes, conexão com banco de dados, persistência de dados, camadas da aplicação e boas práticas de estruturação de código.
+Esse repositório contém uma aplicação desenvolvida com base no livro **PHP Programando com Orientação a Objetos - 4ª edição**, de **Pablo Dall'Oglio**. O objetivo do projeto é estudar e aplicar conceitos de **Programação Orientada a Objetos em PHP**, incluindo organização de classes, conexão com banco de dados, persistência de dados, camadas da aplicação e boas práticas de estruturação de código.
 
 ## Tecnologias utilizadas
 
@@ -20,7 +16,7 @@ O objetivo do projeto é estudar e aplicar conceitos de **Programação Orientad
 
 ## Objetivo de estudo
 
-Este projeto foi criado com fins de aprendizado, acompanhando os exemplos e conceitos apresentados no livro.
+Esee projeto foi criado com fins de aprendizado, acompanhando os exemplos e conceitos apresentados no livro.
 
 Durante o desenvolvimento, são praticados conceitos como:
 
@@ -80,7 +76,7 @@ port = 5432
 Clone o repositório:
 
 ```bash
-git clone <url-do-repositorio>
+git clone https://github.com/JulianaForbici/phpoo
 ```
 
 Acesse a pasta do projeto:
@@ -126,7 +122,7 @@ O projeto utiliza algumas bibliotecas instaladas via Composer, como:
 
 ## Observação
 
-Este projeto é voltado para estudo e prática dos conceitos apresentados no livro. Algumas implementações podem seguir o padrão didático da obra, com foco em aprendizado e compreensão da base da orientação a objetos em PHP.
+Esse projeto é voltado para estudo e prática dos conceitos apresentados no livro. Algumas implementações podem seguir o padrão didático da obra, com foco em aprendizado e compreensão da base da orientação a objetos em PHP.
 
 ## Referência
 
