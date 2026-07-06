@@ -1,50 +1,29 @@
 <?php
-
-namespace Widgets\Form;
+namespace Livro\Widgets\Form;
 
 use Livro\Widgets\Base\Element;
-use Livro\Widgets\Form\CheckButton;
-use Livro\Widgets\Form\Field;
-use Livro\Widgets\Form\FormElementInterface;
-use Livro\Widgets\Form\Label;
 
-class CheckGroup extends Field implements FormElementInterface
+class CheckButton extends Field implements FormElementInterface
 {
-    private $layout = 'vertical';
-    private $items;
-
-    public function setLayout($dir)
-    {
-        $this->layout = $dir;
-    }
-
-    public function addItems($items)
-    {
-        $this->items = $items;
-    }
-
     public function show()
     {
-        if ($this->items)
+        $tag = new Element('input');
+        $tag->class = 'field';
+        $tag->name = $this->name;
+        $tag->value = $this->value;
+        $tag->type = 'checkbox';
+        if (!parent::getEditable())
         {
-            foreach ($this->items as $index => $label)
+            $tag->readonly = "1";
+        }
+
+        if ($this->properties)
+        {
+            foreach ($this->properties as $property => $value)
             {
-                $button = new CheckButton("{$this->name}[]");
-                $button->setValue($index);
-                if (in_array($index, (array) $this->value))
-                {
-                    $button->setProperty('checked', '1');
-                }
-                $obj = new Label($label);
-                $obj->add($button);
-                $obj->show();
-                if ($this->layout == 'vertical')
-                {
-                    $br = new Element('br');
-                    $br->show();
-                    echo "\n";
-                }
+                $tag->$property = $value;
             }
         }
+        $tag->show();
     }
 }
