@@ -16,7 +16,7 @@ Esse repositório contém uma aplicação desenvolvida com base no livro **PHP P
 
 ## Objetivo de estudo
 
-Esee projeto foi criado com fins de aprendizado, acompanhando os exemplos e conceitos apresentados no livro.
+Esse projeto foi criado com fins de aprendizado, acompanhando os exemplos e conceitos apresentados no livro.
 
 Durante o desenvolvimento, são praticados conceitos como:
 
